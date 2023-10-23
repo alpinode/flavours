@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+for f in /build/*.sh; do
+  sh $f
+done
+
+rm -fr \
+  /build \
+  /usr/share/man \
+  /root/.npm* \
+  /root/.cache* \
+;
+

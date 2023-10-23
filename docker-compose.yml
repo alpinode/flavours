@@ -1,0 +1,67 @@
+
+services:
+
+  cbsplit:
+    image: ${IMAGE_NAME}:cbsplit
+    build:
+      context: flavours/cbsplit
+      additional_contexts:
+        shared: shared
+      target: base
+
+  cbsplit-dev:
+    image: ${IMAGE_NAME}:cbsplit-dev
+    build:
+      context: flavours/cbsplit
+      additional_contexts:
+        shared: shared
+      target: dev
+
+  cbsplit-legacy:
+    image: ${IMAGE_NAME}:cbsplit-legacy
+    build:
+      context: flavours/cbsplit-legacy
+      additional_contexts:
+        shared: shared
+      target: base
+
+  cbsplit-legacy-dev:
+    image: ${IMAGE_NAME}:cbsplit-legacy-dev
+    build:
+      context: flavours/cbsplit-legacy
+      additional_contexts:
+        shared: shared
+      target: dev
+
+  ltv:
+    image: ${IMAGE_NAME}:ltv
+    build:
+      context: flavours/ltv
+      additional_contexts:
+        shared: shared
+      target: base
+
+  ltv-dev:
+    image: ${IMAGE_NAME}:ltv-dev
+    build:
+      context: flavours/ltv
+      additional_contexts:
+        shared: shared
+      target: dev
+
+  ltv-legacy:
+    image: ${IMAGE_NAME}:ltv-legacy
+    build:
+      context: flavours/ltv-legacy
+      additional_contexts:
+        shared: shared
+      target: base
+
+  ltv-legacy-dev:
+    image: ${IMAGE_NAME}:ltv-legacy-dev
+    build:
+      context: flavours/ltv-legacy
+      additional_contexts:
+        shared: shared
+      target: dev
+
