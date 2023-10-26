@@ -2,6 +2,7 @@
 set -e
 
 apk add --no-cache \
+  jq \
   make \
   automake \
   autoconf \
