@@ -8,7 +8,7 @@ unset \
   opts \
 ;
 
-for e in "$@"; do
+for e in $@; do
   if [[ -d flavours/$e ]]; then
     opted_flavours="$opted_flavours $e"
   else
@@ -19,7 +19,7 @@ done
 if [[ -n $opted_flavours ]]; then
   flavours=$opted_flavours
 else
-  flavours=`/bin/ls flavours`
+  flavours=$(/bin/ls flavours)
 fi
 
 for f in $flavours; do
