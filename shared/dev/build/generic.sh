@@ -15,3 +15,5 @@ apk add --no-cache \
   curl \
 ;
 
+npm i -g npm-check-updates
+
