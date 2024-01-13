@@ -2,7 +2,7 @@
 set -e
 
 apk add --no-cache \
-  postgresql12-dev \
+  postgresql16-dev \
   libpq \
 ;
 

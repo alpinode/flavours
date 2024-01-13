@@ -1,7 +1,7 @@
 
 set -e
 
-apk add --no-cache \
+apk add --update --no-cache \
   jq \
   make \
   automake \

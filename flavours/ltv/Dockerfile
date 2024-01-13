@@ -4,7 +4,7 @@ COPY --from=shared /base /
 COPY /base /build/
 RUN sh /build/run
 
-FROM alpinode/base:20 as dev
+FROM alpinode/base:21 as dev
 COPY --from=shared /base /
 COPY /base /build/
 RUN sh /build/run
