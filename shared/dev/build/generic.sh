@@ -2,7 +2,7 @@
 set -e
 
 apk add --update --no-cache \
-  jq \
+  coreutils-env \
   make \
   automake \
   autoconf \
@@ -13,7 +13,8 @@ apk add --update --no-cache \
   python3 \
   rsync \
   curl \
-;
+  jq \
+  ;
 
 npm i -g npm-check-updates
 
