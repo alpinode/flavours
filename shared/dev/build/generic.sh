@@ -2,7 +2,6 @@
 set -e
 
 apk add --update --no-cache \
-  coreutils-env \
   make \
   automake \
   autoconf \
@@ -15,6 +14,3 @@ apk add --update --no-cache \
   curl \
   jq \
   ;
-
-npm i -g npm-check-updates
-
