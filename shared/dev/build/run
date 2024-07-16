@@ -6,7 +6,7 @@ for f in /build/*.sh; do
   sh $f
 done
 
-cat <<'EOF' >> /home/app/.bash_profile
+cat <<'EOF' >>/home/app/.bash_profile
 export HISTCONTROL="ignoreboth:erasedups"
 export EDITOR=nvim
 EOF

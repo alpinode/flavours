@@ -1,4 +1,3 @@
-
 set -e
 
 apk add --update --no-cache \

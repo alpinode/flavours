@@ -6,7 +6,7 @@ unset \
   flavours \
   opted_flavours \
   opts \
-;
+  ;
 
 for e in $@; do
   if [[ -d flavours/$e ]]; then
@@ -26,4 +26,3 @@ for f in $flavours; do
   docker compose build $f $opts
   docker compose build $f-dev $opts
 done
-

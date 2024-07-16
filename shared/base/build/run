@@ -11,5 +11,4 @@ rm -fr \
   /usr/share/man \
   /root/.npm* \
   /root/.cache* \
-;
-
+  ;
