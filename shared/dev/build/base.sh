@@ -10,6 +10,5 @@ apk add --update --no-cache \
   git \
   python3 \
   rsync \
-  curl \
   jq \
   ;
