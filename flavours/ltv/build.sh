@@ -1,11 +1,10 @@
 set -e
 
-for f in /build/*.sh; do
+for f in $(find /build/ -type f | sort); do
   sh $f
 done
 
 rm -fr \
-  /build \
   /usr/share/man \
   /root/.npm* \
   /root/.cache* \

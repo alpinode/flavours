@@ -1,18 +1,17 @@
 ARG APP_HOMEDIR=/home/app
 
-FROM alpinode/base:20 AS base
+FROM alpinode/base:22 AS base
 ARG APP_HOMEDIR
 ENV APP_HOMEDIR=$APP_HOMEDIR
-COPY --from=shared /base /
-COPY /base /build/
-RUN sh /build/run
+COPY --from=shared /build/base /build/shared/
+COPY /build/base /build/
+COPY /build.sh /
+RUN sh /build.sh
 
-FROM alpinode/base:20 AS dev
+FROM alpinode/base:22 AS dev
 ARG APP_HOMEDIR
 ENV APP_HOMEDIR=$APP_HOMEDIR
-COPY --from=shared /base /
-COPY /base /build/
-RUN sh /build/run
-COPY --from=shared /dev /
-COPY /dev /build/
-RUN sh /build/run
+COPY --from=shared /build /build/shared
+COPY /build /build/
+COPY /build.sh /
+RUN sh /build.sh
